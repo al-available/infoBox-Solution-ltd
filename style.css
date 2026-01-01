@@ -1,251 +1,159 @@
+/* RESET & BASE */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-image:url(backgroundImg2.jpg) ;
+
+html {
+    font-size: 62.5%; /* 10px = 1rem */
+}
+
+body {
+    background-image: url(backgroundImg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Keeps bg stable on scroll */
     width: 100%;
-    height: 205rem;
-
-
+    min-height: 100vh; /* Changed from fixed height to minimum height */
 }
 
-html{
-    font-size: 62.5%;
-}
-nav{
+/* NAVIGATION */
+nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 90%;
-    margin: 4rem auto;
-    
+    max-width: 1200px;
+    margin: 2rem auto;
+}
 
+.logo h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px white;
 }
-.logo{
-    font-size: 2rem;
-   width: 20%;
-   cursor: pointer;
 
+.tags {
+    display: flex;
+    gap: 2rem;
 }
-.logo>h3{
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  color: rgb(0, 0, 0);
-        text-shadow: 2px 2px 5px white;
-        margin-top: -1rem;
-}
-.tags{
-display: flex;
-max-width: 1200px;
-width: 90%;
-justify-content: right;
-}
-.tags >h4{
-margin-left: 2rem;
-margin-right: 2rem;
-font-size: 2rem;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-style: normal;
 
-
-}
-.tags>h4>a{
+.tags h4 a, .tags h3 a {
     text-decoration: none;
-      color: white;
-      text-shadow: 2px 2px 5px black;
-}
-.tags>h3>a{
-    font-size: 2rem;
-    color:  rgb(0, 170, 255);
-    font-size: 2rem;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  text-decoration: none;
-
-      text-shadow: 2px 2px 5px black;
-}
-/* hero ssection */
-.tech1{
-    width: 40rem;
-    height: 40rem;
-        border-top-left-radius: 50px;
-    border-bottom-right-radius:50px;
-     box-shadow: 5px 5px 10px black;
-
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 5px black;
 }
 
-.tech2{
-    width: 40rem;
-    height: 30rem;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius:50px;
-     box-shadow: 5px 5px 10px black;
-}
-
-.layoutContainer{
+/* HERO / LAYOUT SECTION */
+.layoutContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr; /* Mobile first: 1 column */
+    gap: 4rem;
     width: 90%;
+    max-width: 1200px;
     margin: 5rem auto;
-    row-gap: 5em;
-    
 }
-.textInfo1{
-    grid-column: 1/2;
-    grid-row: 1;
+
+.textInfo1, .textInfo2 {
     display: flex;
     flex-direction: column;
-    margin-left: 15rem;
+    justify-content: center;
+    text-align: center;
 }
-.textInfo1>h1{
-    font-size: 4rem;
-      font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+
+.textInfo1 h1, .textInfo2 h1 {
+    font-size: 3.5rem;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1.5rem;
 }
-.textInfo1>p{
-    font-size: 1.5rem;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+
+.textInfo1 p, .textInfo2 p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-family: "Ubuntu", sans-serif;
 }
-.textInfo2{
-    grid-column:2;
-    grid-row: 2;
+
+.img1, .img2 {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.textInfo2>h1{
-    font-size: 4rem;
-      font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-.textInfo2>p{
-    margin: 2rem auto;
-        font-size: 1.5rem;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    
-}
-.img1{
-        display: flex;
-        justify-content: center;
-        margin-top: 15rem;
-   
-}
-.img2{
-        display: flex;
-        justify-content: center;
-        margin-top: 20rem;
+
+.tech1, .tech2 {
+    width: 100%;
+    max-width: 40rem;
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 }
 
 
+article>h1{
+    text-align: center;
+    margin-top: 2rem;
+}
+/* TESTIMONIALS */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile first */
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 5rem auto;
+}
 
+.review-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* BUTTONS */
+.getInfoBtn, .getStartedBtn, .footerBtn button {
+    padding: 1.5rem 3rem;
+    background-color: rgb(0, 170, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 .getInfo{
     display: flex;
     justify-content: center;
-   grid-column: 2/3;
-   grid-row: 2;
-}
-.getInfoBtn{
-padding: 3rem 6rem;
-    background-color:  rgb(0, 170, 255);
-border: none;
-border-radius: 15px;
-cursor: pointer;
 }
 .getInfoBtn>a{
     text-decoration: none;
     color: white;
-    font-size: 2rem;
-    font-weight: 600;
-}
-.getInfoBtn:hover{
-    background-image: linear-gradient(to right, rgb(0, 170, 255),white );
-    box-shadow: 5px 5px 10px black;
+    font-weight: 600px;
 }
 
-/* testimonial  */
-article>h1{
-    text-align: center;
-    font-size: 5rem;
-      font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-top: 10rem;
-
-}
-.reviews-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 3rem;
-    max-width: 1200px;
-    width: 90%;
-    margin: 5rem  auto;
-}
-.review-card{
-    background-color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    border-style: none;
-    box-shadow: 5px 5px 10px black;
-
-}
-.review-heading{
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    font-weight: bolder;
-}
-.review-text  {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-.reivew-person{
-    font-size: 1.8rem;
-    font-weight: 700;
+.getInfoBtn:hover, .getStartedBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .getStarted{
-  display: flex;
-  justify-content: center;  
-}
-.getStartedBtn{
-padding: 3rem 6rem;
-background-color:  rgb(0, 170, 255);
-border: none;
-border-radius: 15px;
-cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 .getStartedBtn>a{
     text-decoration: none;
     color: white;
-    font-size: 2rem;
     font-weight: 600;
 }
-.getStartedBtn:hover{
-    background-image: linear-gradient(to right, rgb(0, 170, 255),white );
-    box-shadow: 5px 5px 10px black;
-}
-/* footer */
 footer{
-    margin: 5rem auto;
     display: flex;
-   align-items: center;
     flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 }
  .footerText{
 margin: 2rem auto;
@@ -258,7 +166,7 @@ margin: 2rem auto;
     font-size: 2rem;
     font-weight: 600;
  }
- .footerBtn{
+  .footerBtn{
     margin: 1rem auto;
  }
  .footerBtn>button{

@@ -1,57 +1,40 @@
-@media(max-width:81.25rem){
-    /* 1300px / 16px=81.25 */
-    html{
-        font-size: 50%;
-        /* 8px/16px=50 */
+@media (min-width: 64rem) {
+    .layoutContainer {
+        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
+    }
+    
+    .textInfo1, .textInfo2 {
+        text-align: left;
     }
 
-
-}
-@media(max-width:66.9rem){
-    html{
-        font-size: 44%;
-        /* 7px */
+    .reviews-grid {
+        grid-template-columns: 1fr 1fr;
     }
-    .textInfo1>h1{
-        font-size: 3rem;
-    }
-    .textInfo2>h1{
-        font-size: 3rem;
-    }
+    
+    /* Re-establishing your specific layout positions for desktop */
+    .img1 { grid-column: 2; grid-row: 1; }
+    .textInfo1 { grid-column: 1; grid-row: 1; }
+    .img2 { grid-column: 1; grid-row: 2; }
+    .textInfo2 { grid-column: 2; grid-row: 2; }
 }
 
-@media(max-width:51.2rem){
-    html{
-        font-size:31.3% ;
-        /* 5 */
-    }
-    .tech2{
-        width: 40rem;
-        height: 30rem;
-    }
+/* Tablets (Screens between 768px and 1023px) */
+@media (max-width: 63.9rem) {
+    html { font-size: 55%; }
+    .layoutContainer { gap: 8rem; }
+}
 
-}
-@media(max-width:41.25rem){
-    html{
-        font-size: 25%;
-        /* 4px */
+/* Phones (Screens smaller than 767px) */
+@media (max-width: 48rem) {
+    html { font-size: 50%; }
+    
+    nav {
+        flex-direction: column;
+        gap: 2rem;
     }
-        .textInfo1>h1{
-        font-size: 3rem;
-    }
-    .textInfo2>h1{
-        font-size: 3rem;
-    }
-}
-@media(max-width:31.3rem){
-    html{
-        font-size: 18.8%;
-        /* 3px */
-    }
-    .layoutContainer{
-        grid-template-columns: 1fr;
-    }
-    .reviews-grid{
-        grid-template-columns: 1fr;
+    
+    .tags {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
