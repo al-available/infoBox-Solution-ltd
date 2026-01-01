@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(backgroundImg2.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 205rem;
+
+
+}
+
+html{
+    font-size: 62.5%;
+}
+nav{
+    display: flex;
+    width: 90%;
+    margin: 4rem auto;
+    
+
+}
+.logo{
+    font-size: 2rem;
+   width: 20%;
+   cursor: pointer;
+
+}
+.logo>h3{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 5px white;
+        margin-top: -1rem;
+}
+.tags{
+display: flex;
+max-width: 1200px;
+width: 90%;
+justify-content: right;
+}
+.tags >h4{
+margin-left: 2rem;
+margin-right: 2rem;
+font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+
+}
+.tags>h4>a{
+    text-decoration: none;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+}
+.tags>h3>a{
+    font-size: 2rem;
+    color:  rgb(0, 170, 255);
+    font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+
+      text-shadow: 2px 2px 5px black;
+}
+/* hero ssection */
+.tech1{
+    width: 40rem;
+    height: 40rem;
+        border-top-left-radius: 50px;
+    border-bottom-right-radius:50px;
+     box-shadow: 5px 5px 10px black;
+
+}
+
+.tech2{
+    width: 40rem;
+    height: 30rem;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius:50px;
+     box-shadow: 5px 5px 10px black;
+}
+
+.layoutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    margin: 5rem auto;
+    row-gap: 5em;
+    
+}
+.textInfo1{
+    grid-column: 1/2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15rem;
+}
+.textInfo1>h1{
+    font-size: 4rem;
+      font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.textInfo1>p{
+    font-size: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.textInfo2{
+    grid-column:2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textInfo2>h1{
+    font-size: 4rem;
+      font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.textInfo2>p{
+    margin: 2rem auto;
+        font-size: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    
+}
+.img1{
+        display: flex;
+        justify-content: center;
+        margin-top: 15rem;
+   
+}
+.img2{
+        display: flex;
+        justify-content: center;
+        margin-top: 20rem;
+}
+
+
+
+.getInfo{
+    display: flex;
+    justify-content: center;
+   grid-column: 2/3;
+   grid-row: 2;
+}
+.getInfoBtn{
+padding: 3rem 6rem;
+    background-color:  rgb(0, 170, 255);
+border: none;
+border-radius: 15px;
+cursor: pointer;
+}
+.getInfoBtn>a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.getInfoBtn:hover{
+    background-image: linear-gradient(to right, rgb(0, 170, 255),white );
+    box-shadow: 5px 5px 10px black;
+}
+
+/* testimonial  */
+article>h1{
+    text-align: center;
+    font-size: 5rem;
+      font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 10rem;
+
+}
+.reviews-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    max-width: 1200px;
+    width: 90%;
+    margin: 5rem  auto;
+}
+.review-card{
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: 5px 5px 10px black;
+
+}
+.review-heading{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    font-weight: bolder;
+}
+.review-text  {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.reivew-person{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.getStarted{
+  display: flex;
+  justify-content: center;  
+}
+.getStartedBtn{
+padding: 3rem 6rem;
+background-color:  rgb(0, 170, 255);
+border: none;
+border-radius: 15px;
+cursor: pointer;
+}
+.getStartedBtn>a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.getStartedBtn:hover{
+    background-image: linear-gradient(to right, rgb(0, 170, 255),white );
+    box-shadow: 5px 5px 10px black;
+}
+/* footer */
+footer{
+    margin: 5rem auto;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+}
+ .footerText{
+margin: 2rem auto;
+ }
+ .footerText>h1{
+    font-size: 3rem;
+    font-weight: 600;
+ }
+ .footerP{
+    font-size: 2rem;
+    font-weight: 600;
+ }
+ .footerBtn{
+    margin: 1rem auto;
+ }
+ .footerBtn>button{
+    padding: 2rem 4rem ;
+    background-color:  rgb(0, 170, 255);
+    border-style: none;
+    border-radius: 10px;
+
+ }
+ .footerBtn>button>a{
+       color: white;
+       text-decoration: none;
+       font-size: 2rem;
+       font-weight: 700;
+ }
+.footerBtn>button:hover{
+    background-image: linear-gradient(to right, rgb(0, 170, 255),white );
+    box-shadow: 5px 5px 10px black;
+}
