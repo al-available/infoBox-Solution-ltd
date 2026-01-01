@@ -10,18 +10,66 @@
     .reviews-grid {
         grid-template-columns: 1fr 1fr;
     }
+   .menuImg{
+        display: none;
+    }
+   .menuOpen{
+        display: none;
+    }
+    .links{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+
     
     /* Re-establishing your specific layout positions for desktop */
     .img1 { grid-column: 2; grid-row: 1; }
     .textInfo1 { grid-column: 1; grid-row: 1; }
     .img2 { grid-column: 1; grid-row: 2; }
     .textInfo2 { grid-column: 2; grid-row: 2; }
+        .review-text{
+        font-size: 2rem;
+    }
+    .review-heading{
+        font-size: 2rem ;
+        font-weight: 900;
+    }
+    .reivew-person{
+        font-size: 2rem;
+        font-weight: 900;
+    }
 }
 
 /* Tablets (Screens between 768px and 1023px) */
 @media (max-width: 63.9rem) {
     html { font-size: 55%; }
     .layoutContainer { gap: 8rem; }
+       .menuImg{
+        display: none;
+    }
+    .menuOpen{
+        display: none;
+    }
+    .links{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+        .review-text{
+        font-size: 2rem;
+    }
+    .review-heading{
+        font-size: 2rem ;
+        font-weight: 900;
+    }
+    .reivew-person{
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+
 }
 
 /* Phones (Screens smaller than 767px) */
@@ -29,12 +77,29 @@
     html { font-size: 50%; }
     
     nav {
-        flex-direction: column;
+        flex-direction: row;
         gap: 2rem;
     }
     
-    .tags {
-        flex-wrap: wrap;
-        justify-content: center;
+    .links {
+        display: none;
+    }
+    .menuImg{
+        display: block;
+    }
+     .menuOpen{
+        display: none;
+    }
+
+    .review-text{
+        font-size: 2rem;
+    }
+    .review-heading{
+        font-size: 2rem ;
+        font-weight: 900;
+    }
+    .reivew-person{
+        font-size: 2rem;
+        font-weight: 900;
     }
 }

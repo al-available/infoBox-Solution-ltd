@@ -30,9 +30,9 @@ nav {
 }
 
 .logo h3 {
-    font-family: "Oswald", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: rgb(0, 0, 0);
     text-shadow: 2px 2px 5px white;
 }
@@ -50,7 +50,18 @@ nav {
     color: white;
     text-shadow: 2px 2px 5px black;
 }
+.menuImg{
+    width: 5rem;
+    height: auto;
+    cursor: pointer;
 
+}
+.menuOpen{
+     width: 5rem;
+    height: auto;
+    cursor: pointer;
+
+}
 /* HERO / LAYOUT SECTION */
 .layoutContainer {
     display: grid;
@@ -99,6 +110,9 @@ nav {
 article>h1{
     text-align: center;
     margin-top: 2rem;
+        font-family: "Oswald", sans-serif;
+        font-weight: 700;
+        font-size: 3rem;
 }
 /* TESTIMONIALS */
 .reviews-grid {
@@ -133,7 +147,9 @@ article>h1{
 .getInfoBtn>a{
     text-decoration: none;
     color: white;
-    font-weight: 600px;
+            font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
 }
 
 .getInfoBtn:hover, .getStartedBtn:hover {
@@ -147,7 +163,9 @@ article>h1{
 .getStartedBtn>a{
     text-decoration: none;
     color: white;
-    font-weight: 600;
+         font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
 }
 footer{
     display: flex;
@@ -169,20 +187,11 @@ margin: 2rem auto;
   .footerBtn{
     margin: 1rem auto;
  }
- .footerBtn>button{
-    padding: 2rem 4rem ;
-    background-color:  rgb(0, 170, 255);
-    border-style: none;
-    border-radius: 10px;
 
- }
  .footerBtn>button>a{
        color: white;
        text-decoration: none;
-       font-size: 2rem;
-       font-weight: 700;
+            font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
  }
-.footerBtn>button:hover{
-    background-image: linear-gradient(to right, rgb(0, 170, 255),white );
-    box-shadow: 5px 5px 10px black;
-}
