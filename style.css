@@ -98,6 +98,7 @@ body {
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 
   animation: logoGradientMove 6s linear infinite;
@@ -119,6 +120,7 @@ body {
   background-size: 300% 100%;
 
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 
   animation: logoStrongGradient 15s linear infinite;
@@ -194,10 +196,7 @@ body {
   background: rgba(0, 229, 255, 0.12);
   box-shadow: 0 0 1.2rem var(--primary-soft);
 }
-/* menu img */
-.navMenu>img{
 
-}
 .menuClose{
   display: none;
   width: 5rem;
@@ -376,6 +375,7 @@ aside > a:not(:last-child)::after{
   background-size: 300% 100%;
 
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 
   animation: heroGradientMove 7s linear infinite;
@@ -608,6 +608,7 @@ aside > a:not(:last-child)::after{
 .courses-header h2 span {
   background: linear-gradient(90deg, #00e5ff, #6366f1);
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 }
 
@@ -773,6 +774,7 @@ aside > a:not(:last-child)::after{
 .values-header h2 span {
   background: linear-gradient(90deg, #00e5ff, #6366f1);
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 }
 
@@ -870,6 +872,7 @@ aside > a:not(:last-child)::after{
 .cta-container h2 span {
   background: linear-gradient(90deg, #00e5ff, #6366f1);
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 }
 
@@ -1015,6 +1018,7 @@ aside > a:not(:last-child)::after{
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 
   animation: logoGradientMove 6s linear infinite;
@@ -1046,6 +1050,7 @@ aside > a:not(:last-child)::after{
   background-size: 300% 100%;
 
   -webkit-background-clip: text;
+    background-clip: text;
   color: transparent;
 
   animation: footerLogoGradient 15s linear infinite;

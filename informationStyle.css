@@ -102,7 +102,7 @@ body {
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
-    background-clip: text;
+  background-clip: text;
   color: transparent;
 
   animation: logoGradientMove 6s linear infinite;
@@ -124,7 +124,7 @@ body {
   background-size: 300% 100%;
 
   -webkit-background-clip: text;
-    background-clip: text;
+  background-clip: text;
   color: transparent;
 
   animation: logoStrongGradient 15s linear infinite;
@@ -200,6 +200,7 @@ body {
   background: rgba(0, 229, 255, 0.12);
   box-shadow: 0 0 1.2rem var(--primary-soft);
 }
+
 .menuClose{
   display: none;
   width: 5rem;
@@ -313,420 +314,240 @@ aside > a:not(:last-child)::after{
 
 /* nav ends here  */
 
-/* team hero section */
-.team-hero {
-  position: relative;
-  padding: 10rem 2.4rem;
-  overflow: hidden;
-  background: linear-gradient(
-    90deg,
-    #1e1b4b,   /* deep indigo (dark base) */
-    #3b1579,   /* rich purple */
-    #a485ffdb,   /* soft violet highlight */
-    #6d28d9,
-    #1e1b4b
-  );
-    
+/* impact starts here  */
+.impact {
+  padding: 8rem 2.4rem 10rem;
+  height: 80rem;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,132,199,0.15),
+      rgba(88,28,135,0.35)
+    ),
+    linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
+    #020617;
+
+  background-size: cover, 4rem 4rem, 4rem 4rem;
 }
 
-/* CONTAINER */
-.team-container {
-  max-width: 110rem;
-  margin:19rem auto;
+/* 
+   HEADER
+*/
+.impact-header {
+  max-width: 90rem;
+  margin: 17rem auto 7rem;
   text-align: center;
 }
 
-/* BADGE */
-.team-badge {
+.impact-badge {
   display: inline-block;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2rem;
   padding: 0.6rem 1.8rem;
 
   font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: 0.03em;
 
-  color: #00f6ff;
-  border-radius: 2rem;
+  color: #22d3ee;
+  border-radius: 999rem;
 
-  background: rgba(0, 246, 255, 0.12);
-  border: 0.1rem solid rgba(0, 246, 255, 0.45);
+  background: rgba(34,211,238,0.12);
+  border: 0.1rem solid rgba(34,211,238,0.45);
 
-  box-shadow: 0 0 2.4rem rgba(0, 246, 255, 0.35);
+  box-shadow: 0 0 2.4rem rgba(34,211,238,0.35);
+
+  animation: fadeDown 0.8s ease both;
 }
 
 /* TITLE */
-.team-title {
+.impact-title {
   font-size: 4.6rem;
   line-height: 1.15;
   font-weight: 700;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2rem;
+
+  animation: fadeUp 1s ease both;
 }
 
-/* Gradient word */
-.team-gradient {
+.impact-title span {
   background: linear-gradient(
     90deg,
     #00e5ff,
-    #6366f1
+    #8b5cf6,
+    #00e5ff
   );
   background-size: 200% 100%;
+
   -webkit-background-clip: text;
-    background-clip: text;
+  background-clip: text;
   color: transparent;
 
-  animation: teamGradientMove 6s linear infinite;
-
-  text-shadow:
-    0 0 4rem rgba(99,102,241,0.45),
-    0 0 6rem rgba(0,229,255,0.35);
+  animation: gradientFlow 6s linear infinite;
 }
 
-/* TEXT */
-.team-description {
-  max-width: 70rem;
-  margin: 0 auto;
-
+/* DESCRIPTION */
+.impact-description {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #cbd5f5;
+
+  animation: fadeUp 1.2s ease both;
 }
 
-/* ANIMATION */
-@keyframes teamGradientMove {
+/* 
+   GRID
+*/
+.impact-grid {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.2rem;
+}
+
+/* 
+   CARD
+*/
+.impact-card {
+  text-align: center;
+  padding: 3.2rem 2.4rem;
+
+  background: rgba(2,6,23,0.85);
+  border-radius: 2.4rem;
+
+  box-shadow:
+    inset 0 0 0 0.1rem rgba(255,255,255,0.06);
+
+  animation: fadeUp 1.4s ease both;
+}
+
+/* NUMBER */
+.impact-card h3 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+
+  background: linear-gradient(
+    90deg,
+    #00e5ff,
+    #38bdf8,
+    #6366f1
+  );
+  background-size: 200% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: gradientFlow 5s linear infinite;
+
+  text-shadow:
+    0 0 2.4rem rgba(56,189,248,0.35);
+}
+
+/* LABEL */
+.impact-card p {
+  font-size: 1.4rem;
+  color: #94a3b8;
+}
+
+/* 
+   ANIMATIONS
+*/
+@keyframes gradientFlow {
   from { background-position: 0% 50%; }
   to   { background-position: 200% 50%; }
 }
 
-/* ACCESSIBILITY */
-@media (prefers-reduced-motion: reduce) {
-  .team-gradient {
-    animation: none;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
   }
-}
-/* team hero section ends here */
-
-/* principles section starts */
-
-.principles {
-  padding: 8rem 2.4rem;
-  background:
-    linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
-    linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
-    #020617;
-  background-size: 4rem 4rem;
-}
-
-/*  GRID  */
-.principles-container {
-  max-width: 120rem;
-  margin: 0 auto;
-  display: grid;
-  gap: 3.2rem;
-}
-
-@media (min-width: 64rem) {
-  .principles-container {
-    grid-template-columns: repeat(3, 1fr);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/*  CARD  */
-.principle-card {
-  padding: 4rem 3.2rem;
-  border-radius: 2.4rem;
-  text-align: center;
-  background: rgba(2, 6, 23, 0.92);
-
-  box-shadow:
-    inset 0 0 0 0.1rem rgba(255,255,255,0.06);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.principle-card:hover {
-  transform: translateY(-0.6rem);
-}
+/* impact end here  */
 
-/*  ICON  */
-.principle-icon {
-  width: 6.4rem;
-  height: 6.4rem;
-  margin: 0 auto 2rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 1.6rem;
-}
-
-/* SVG inside icon */
-.principle-icon img {
-  width: 3.2rem;
-  height: 3.2rem;
-  filter: brightness(0) invert(1);
-}
-
-/*  COLOR VARIANTS  */
-.principle-card.cyan .principle-icon {
-  background: radial-gradient(circle, #00e5ff, #0284c7);
-  box-shadow: 0 0 3.2rem rgba(0,229,255,0.65);
-}
-
-.principle-card.purple .principle-icon {
-  background: radial-gradient(circle, #a855f7, #6366f1);
-  box-shadow: 0 0 3.2rem rgba(168,85,247,0.65);
-}
-
-.principle-card.green .principle-icon {
-  background: radial-gradient(circle, #22c55e, #16a34a);
-  box-shadow: 0 0 3.2rem rgba(34,197,94,0.65);
-}
-
-/*  CARD HOVER GLOW  */
-.principle-card.cyan:hover {
-  box-shadow:
-    0 0 3.6rem rgba(0,229,255,0.35),
-    inset 0 0 0 0.1rem rgba(0,229,255,0.35);
-}
-
-.principle-card.purple:hover {
-  box-shadow:
-    0 0 3.6rem rgba(168,85,247,0.35),
-    inset 0 0 0 0.1rem rgba(168,85,247,0.35);
-}
-
-.principle-card.green:hover {
-  box-shadow:
-    0 0 3.6rem rgba(34,197,94,0.35),
-    inset 0 0 0 0.1rem rgba(34,197,94,0.35);
-}
-
-/*  TEXT */
-.principle-card h3 {
-  font-size: 1.9rem;
-  margin-bottom: 1.2rem;
-  color: #ffffff;
-}
-
-.principle-card p {
-  font-size: 1.4rem;
-  line-height: 1.7;
-  color: #94a3b8;
-}
-/* principles ends here  */
-
-/* founders section */
-.founder {
-  padding: 8rem 2.4rem;
+/* ===============================
+   WORKING HOURS
+================================ */
+.working-hours {
+  padding: 8rem 2.4rem 10rem;
 
   background:
     linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
     linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
     #020617;
+
   background-size: 4rem 4rem;
 }
 
-/*  HEADER  */
-.founder-header {
-  max-width: 80rem;
-  margin: 0 auto 6.4rem;
+/* HEADER */
+.working-header {
   text-align: center;
+  margin-bottom: 6rem;
 }
 
-.founder-header h2 {
-  font-size: 4.2rem;
-  line-height: 1.2;
+.working-title {
+  font-size: 4.6rem;
+  font-weight: 700;
   margin-bottom: 1.6rem;
 }
 
-.founder-header h2 span {
+.working-title span {
   background: linear-gradient(90deg, #00e5ff, #6366f1);
   -webkit-background-clip: text;
     background-clip: text;
   color: transparent;
+
+  animation: gradientFlow 6s linear infinite;
 }
 
-.founder-header p {
+.working-subtitle {
   font-size: 1.6rem;
   color: #94a3b8;
 }
 
-/*  CARD  */
-.founder-card {
-  max-width: 110rem;
+/* ===============================
+   CARD
+================================ */
+.schedule-card {
+  max-width: 80rem;
   margin: 0 auto;
-
-  display: grid;
-  gap: 4.8rem;
-
   padding: 4.8rem;
-  border-radius: 2.4rem;
 
-  background: rgba(2, 6, 23, 0.92);
-  box-shadow: inset 0 0 0 0.1rem rgba(255,255,255,0.06);
-}
-
-/* Desktop layout */
-@media (min-width: 64rem) {
-  .founder-card {
-    grid-template-columns: 1fr 1.4fr;
-    align-items: center;
-  }
-}
-
-/*  AVATAR  */
-.founder-avatar {
-  display: flex;
-  justify-content: center;
-}
-
-.avatar-circle {
-  width: 22rem;
-  height: 22rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-  background: radial-gradient(circle at top left, #1e293b, #020617);
-
-  box-shadow:
-    0 0 6.4rem rgba(99,102,241,0.35),
-    inset 0 0 0 0.2rem rgba(99,102,241,0.4);
-}
-
-.avatar-circle img {
-  width: 8.4rem;
-  height: 8.4rem;
-
-  filter:
-    brightness(0) invert(1)
-    drop-shadow(0 0 1.6rem rgba(99,102,241,0.6))
-    drop-shadow(0 0 3.2rem rgba(34,211,238,0.45));
-}
-
-/*  CONTENT  */
-.founder-content .badge {
-  display: inline-block;
-  margin-bottom: 1.6rem;
-
-  padding: 0.6rem 1.4rem;
-  border-radius: 999rem;
-
-  font-size: 1.2rem;
-  font-weight: 500;
-
-  color: #00e5ff;
-  background: rgba(0,229,255,0.1);
-  border: 0.1rem solid rgba(0,229,255,0.35);
-}
-
-.founder-content h3 {
-  font-size: 2.8rem;
-  margin-bottom: 1.6rem;
-}
-
-.founder-content p {
-  font-size: 1.5rem;
-  line-height: 1.7;
-  color: #94a3b8;
-  margin-bottom: 2.4rem;
-}
-
-/*  TAGS  */
-.founder-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.founder-tags span {
-  padding: 0.6rem 1.4rem;
-  font-size: 1.2rem;
-
-  border-radius: 999rem;
-  color: #e5e7eb;
-
-  background: rgba(255,255,255,0.06);
-  border: 0.1rem solid rgba(255,255,255,0.15);
-}
-/* founders end here  */
-
-/* achievements section starts here */
-.achievements {
-  padding: 8rem 2.4rem;
-
-  background:
-    linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
-    linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
-    #020617;
-  background-size: 4rem 4rem;
-}
-
-/*  HEADER  */
-.achievements-header {
-  text-align: center;
-  margin-bottom: 6.4rem;
-}
-
-.achievements-header h2 {
-  font-size: 4.2rem;
-  font-weight: 600;
-}
-
-.achievements-header h2 span {
-  background: linear-gradient(90deg, #00e5ff, #8b5cf6);
-  -webkit-background-clip: text;
-    background-clip: text;
-  color: transparent;
-}
-
-/*  GRID  */
-.achievements-grid {
-  max-width: 120rem;
-  margin: 0 auto;
-
-  display: grid;
-  gap: 3.2rem;
-}
-
-/* Desktop */
-@media (min-width: 64rem) {
-  .achievements-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/*  CARD  */
-.achievement-card {
-  padding: 4rem 3.2rem;
+  border-radius: 2.8rem;
   text-align: center;
 
-  border-radius: 2.4rem;
-  background: rgba(2, 6, 23, 0.92);
+  background: rgba(2,6,23,0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
   box-shadow:
-    inset 0 0 0 0.1rem rgba(255,255,255,0.06);
+    inset 0 0 0 0.1rem rgba(255,255,255,0.06),
+    0 0 6.4rem rgba(99,102,241,0.15);
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  animation: fadeUp 1s ease both;
 }
 
-.achievement-card:hover {
-  transform: translateY(-0.6rem);
-  box-shadow:
-    0 0 3.6rem rgba(0,229,255,0.25),
-    inset 0 0 0 0.1rem rgba(0,229,255,0.35);
-}
-
-/*  ICON  */
-.achievement-icon {
+/* ICON */
+.schedule-icon {
   width: 6.4rem;
   height: 6.4rem;
   margin: 0 auto 2rem;
@@ -737,165 +558,346 @@ aside > a:not(:last-child)::after{
 
   border-radius: 1.6rem;
 
-  background: radial-gradient(circle, #00e5ff, #0284c7);
-  box-shadow: 0 0 3.2rem rgba(0,229,255,0.6);
-}
-
-.achievement-icon img {
-  width: 3.2rem;
-  height: 3.2rem;
-  filter: brightness(0) invert(1);
-}
-
-/*  TEXT  */
-.achievement-card h3 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-  line-height: 1.4;
-}
-
-.achievement-card p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #94a3b8;
-}
-/* achievement section ends here  */
-
-/* team section */
-.team {
-  padding: 8rem 2.4rem;
-
-  background:
-    linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
-    linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
-    #020617;
-  background-size: 4rem 4rem;
-}
-
-/*  HEADER  */
-.team-header {
-  text-align: center;
-  max-width: 80rem;
-  margin: 0 auto 6.4rem;
-}
-
-.team-header h2 {
-  font-size: 4.2rem;
-  margin-bottom: 1.6rem;
-}
-
-.team-header h2 span {
-  background: linear-gradient(90deg, #00e5ff, #6366f1);
-  -webkit-background-clip: text;
-    background-clip: text;
-  color: transparent;
-}
-
-.team-header p {
-  font-size: 1.6rem;
-  color: #94a3b8;
-}
-
-/*  GRID  */
-.team-grid {
-  max-width: 120rem;
-  margin: 0 auto;
-
-  display: grid;
-  gap: 3.2rem;
-}
-
-@media (min-width: 64rem) {
-  .team-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/*  CARD  */
-.team-card {
-  padding: 4rem 3.2rem;
-  border-radius: 2.4rem;
-
-  background: rgba(2, 6, 23, 0.92);
-  box-shadow: inset 0 0 0 0.1rem rgba(255,255,255,0.06);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-0.6rem);
-  box-shadow:
-    0 0 3.6rem rgba(0,229,255,0.25),
-    inset 0 0 0 0.1rem rgba(0,229,255,0.35);
-}
-
-
-
-/*  AVATAR  */
-.team-avatar {
-  width: 9.6rem;
-  height: 9.6rem;
-  margin-bottom: 2.4rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
   background: radial-gradient(circle, #00e5ff, #0284c7);
   box-shadow: 0 0 3.6rem rgba(0,229,255,0.6);
 }
 
-.team-avatar img {
-  width: 4rem;
-  height: 4rem;
+.schedule-icon img {
+  width: 3.2rem;
+  height: 3.2rem;
   filter: brightness(0) invert(1);
 }
 
-/*  TEXT  */
-.team-card h3 {
-  font-size: 1.8rem;
+/* TITLE */
+.schedule-title {
+  font-size: 2.4rem;
   margin-bottom: 0.6rem;
 }
 
-.team-card .role {
-  display: block;
-  margin-bottom: 1.6rem;
-
-  font-size: 1.3rem;
-  color: #22d3ee;
+.schedule-note {
+  font-size: 1.4rem;
+  color: #94a3b8;
+  margin-bottom: 3.2rem;
 }
 
-.team-card p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #94a3b8;
+/* ===============================
+   LIST
+================================ */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.schedule-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.6rem 2rem;
+  border-radius: 1.6rem;
+
+  background: rgba(255,255,255,0.03);
+  border: 0.1rem solid rgba(255,255,255,0.08);
+}
+
+.schedule-row.active {
+  border-color: rgba(0,229,255,0.45);
+  box-shadow: 0 0 2.4rem rgba(0,229,255,0.2);
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  font-size: 1.5rem;
+}
+
+.day img {
+  width: 2rem;
+  height: 2rem;
+  filter: brightness(0) invert(1);
+}
+
+/* TIME BADGES */
+.time {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999rem;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.time.open {
+  color: #020617;
+  background: linear-gradient(90deg, #00e5ff, #38bdf8);
+}
+
+.time.closed {
+  color: #ffffff;
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes gradientFlow {
+  from { background-position: 0% 50%; }
+  to { background-position: 200% 50%; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}
+
+/* work ends here */
+
+/* accomplishment */
+
+.accomplishments {
+  padding: 8rem 6rem;
+    background:
+    linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
+    #020617;
+
+  background-size: 4rem 4rem;
+  
+}
+
+/* =======================
+   HEADER
+======================= */
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.header h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.header h2 span {
+  background: linear-gradient(90deg, #00c2ff, #8b5cf6);
+  -webkit-background-clip: text;
+    background-clip: text;
+  color: transparent;
+}
+
+.header p {
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  color: #9fb4cc;
+}
+
+/* =======================
+   GRID
+======================= */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 3rem;
+}
+
+/* =======================
+   CARD
+======================= */
+.card {
+  position: relative;
+  padding: 3rem;
+  border-radius: 1.6rem;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 28, 50, 0.9),
+    rgba(6, 14, 30, 0.9)
+  );
+  border: 0.1rem solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(1.4rem);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 0 3.2rem rgba(0, 194, 255, 0.18);
+}
+
+/* =======================
+   YEAR BADGE
+======================= */
+.year {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 10rem;
+  background: rgba(255,255,255,0.08);
+  color: #cfe9ff;
+}
+
+/* =======================
+   ICON
+======================= */
+.icon-ac {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 1.2rem;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 194, 255, 0.15);
+  box-shadow: 0 0 2.6rem rgba(0, 194, 255, 0.55);
   margin-bottom: 2.4rem;
 }
 
-/*  TAGS  */
-.team-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
+.icon-ac img {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
-.team-tags span {
-  padding: 0.6rem 1.4rem;
-  font-size: 1.2rem;
-
-  border-radius: 999rem;
-  color: #e5e7eb;
-
-  background: rgba(255,255,255,0.06);
-  border: 0.1rem solid rgba(255,255,255,0.15);
+/* =======================
+   TEXT
+======================= */
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
 }
-/* team section ends here */
 
-/* footer start here  */
+.card p {
+  font-size: 1.4rem;
+  color: #a9bfd6;
+  line-height: 1.6;
+}
+
+
+
+/* accomplishments end here  */
+
+/* solution starts here */
+.solutions {
+  padding: 8rem 6rem;
+      background:
+    linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
+    #020617;
+
+  background-size: 4rem 4rem;
+}
+
+/* =======================
+   HEADER
+======================= */
+.solutions-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.solutions-header h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.solutions-header h2 span {
+  background: linear-gradient(90deg, #00c2ff, #6366f1);
+  -webkit-background-clip: text;
+    background-clip: text;
+  color: transparent;
+}
+
+.solutions-header p {
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  color: #9fb4cc;
+}
+
+/* =======================
+   GRID
+======================= */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 3rem;
+}
+
+/* =======================
+   CARD
+======================= */
+.solution-card {
+  padding: 3.6rem 3rem;
+  text-align: center;
+  border-radius: 1.8rem;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 28, 50, 0.9),
+    rgba(6, 14, 30, 0.9)
+  );
+  border: 0.1rem solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(1.4rem);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 0 3.2rem rgba(0, 194, 255, 0.18);
+}
+
+/* =======================
+   ICON
+======================= */
+.icon {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1.4rem;
+  background: rgba(0, 194, 255, 0.15);
+  box-shadow: 0 0 2.6rem rgba(0, 194, 255, 0.55);
+}
+
+.icon img {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+/* =======================
+   TEXT
+======================= */
+.solution-card h3 {
+  font-size: 2.6rem;
+  color: #2dd4ff;
+  margin-bottom: 0.8rem;
+}
+
+.solution-card strong {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.solution-card p {
+  font-size: 1.3rem;
+  color: #a9bfd6;
+  line-height: 1.6;
+}
+/* solution ends here */
+
+/* footer section */
 .footer {
   background:
     linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),

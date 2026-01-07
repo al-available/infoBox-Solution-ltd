@@ -1,0 +1,207 @@
+@media (min-width: 160rem) {
+  .nav-container {
+    max-width: 140rem;
+  }
+
+  .impact-grid,
+  .grid,
+  .solutions-grid {
+    max-width: 140rem;
+    margin-inline: auto;
+  }
+
+  .footer-container {
+    max-width: 140rem;
+  }
+  .footer-top{
+      grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 144rem) {
+  .impact-header {
+    max-width: 100rem;
+  }
+
+  .impact-title {
+    font-size: 5.2rem;
+  }
+
+  .working-title,
+  .header h2,
+  .solutions-header h2 {
+    font-size: 4.8rem;
+  }
+
+  .impact-grid {
+    gap: 4rem;
+  }
+    .footer-top{
+      grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 128rem) {
+  .impact-header {
+    max-width: 80rem;
+  }
+
+  .solutions-grid {
+    gap: 2.4rem;
+  }
+
+  .schedule-card {
+    max-width: 70rem;
+  }
+    .footer-top{
+      grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 102.4rem) {
+  .impact {
+    height: auto;
+  }
+
+  .impact-grid {
+    gap: 2.4rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top{
+      grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 76.8rem) {
+  .nav-links {
+    display: none;
+  }
+
+  .navMenuOpen {
+    display: block;
+  }
+
+  aside {
+    right: 1.6rem;
+  }
+
+  .impact-title {
+    font-size: 4rem;
+  }
+
+  .working-title {
+    font-size: 4rem;
+  }
+
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 64rem) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions {
+    padding: 6rem 2.4rem;
+  }
+
+  .accomplishments {
+    padding: 6rem 2.4rem;
+  }
+}
+
+@media (max-width: 48rem) {
+
+  .impact-header {
+    margin-top: 14rem;
+  }
+
+  .impact-title {
+    font-size: 3.6rem;
+  }
+
+  .impact-description {
+    font-size: 1.5rem;
+  }
+
+  .impact-card h3 {
+    font-size: 3rem;
+  }
+
+  .schedule-card {
+    padding: 3.6rem 2.4rem;
+  }
+
+  .day {
+    font-size: 1.4rem;
+  }
+    .footer-top{
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nav-container {
+    padding: 1rem 1.6rem;
+  
+  }
+    .logo {
+  padding: 0.4rem;
+
+  }
+
+
+
+
+  .nav-links {
+    display: none;
+  }
+
+  .navMenuOpen {
+    display: block;
+  }
+
+  .impact {
+    height: auto;
+    padding: 6rem 1.6rem 8rem;
+  }
+
+  .impact-title {
+    font-size: 3.2rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .working-title,
+  .header h2,
+  .solutions-header h2 {
+    font-size: 3.2rem;
+  }
+
+  .grid,
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
