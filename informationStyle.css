@@ -316,19 +316,14 @@ aside > a:not(:last-child)::after{
 
 /* impact starts here  */
 .impact {
-  padding: 8rem 2.4rem 10rem;
-  height: 80rem;
+  padding: 17rem 2.4rem 25rem;
+
   background:
-    linear-gradient(
-      90deg,
-      rgba(2,132,199,0.15),
-      rgba(88,28,135,0.35)
-    ),
     linear-gradient(transparent 95%, rgba(255,255,255,0.04) 96%),
     linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
-    #020617;
+    #0a086b;
+  background-size: 4rem 4rem;
 
-  background-size: cover, 4rem 4rem, 4rem 4rem;
 }
 
 /* 
@@ -336,7 +331,7 @@ aside > a:not(:last-child)::after{
 */
 .impact-header {
   max-width: 90rem;
-  margin: 17rem auto 7rem;
+  margin: 10rem auto 7rem;
   text-align: center;
 }
 
@@ -760,14 +755,19 @@ aside > a:not(:last-child)::after{
   border-radius: 1.2rem;
   display: grid;
   place-items: center;
-  background: rgba(0, 194, 255, 0.15);
-  box-shadow: 0 0 2.6rem rgba(0, 194, 255, 0.55);
+  background: radial-gradient(circle, #00e5ff, #0284c7);
+  box-shadow: 0 0 3.2rem rgba(0,229,255,0.6);
   margin-bottom: 2.4rem;
 }
 
 .icon-ac img {
   width: 2.4rem;
   height: 2.4rem;
+    filter:
+    brightness(0)
+    invert(1)
+    drop-shadow(0 0 0.6rem rgba(0,229,255,0.8));
+
 }
 
 /* =======================
@@ -873,6 +873,10 @@ aside > a:not(:last-child)::after{
 .icon img {
   width: 2.6rem;
   height: 2.6rem;
+    filter:
+    brightness(0)
+    invert(1)
+    drop-shadow(0 0 0.6rem rgba(0,229,255,0.8));
 }
 
 /* =======================
