@@ -257,9 +257,7 @@ aside > a{
   border-radius: 1.4rem;
 
   /* glass look */
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+
   border: 1px solid rgba(255, 255, 255, 0.12);
 
   display: flex;
@@ -277,7 +275,7 @@ aside > a{
 
 /* active / current link */
 aside > a.active{
-  color: #0008ff;
+  color: #00d9ff;
   background: rgba(0, 246, 255, 0.18);
   box-shadow: 0 0 2.4rem rgba(0, 246, 255, 0.45);
 }
