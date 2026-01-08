@@ -273,17 +273,11 @@ aside > a{
     box-shadow 0.3s ease;
 }
 
-/* hover */
-aside > a:hover{
-  color: #00f6ff;
-  background: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 2rem rgba(0, 246, 255, 0.35);
-  transform: translateX(0.4rem);
-}
+
 
 /* active / current link */
 aside > a.active{
-  color: #00f6ff;
+  color: #0008ff;
   background: rgba(0, 246, 255, 0.18);
   box-shadow: 0 0 2.4rem rgba(0, 246, 255, 0.45);
 }

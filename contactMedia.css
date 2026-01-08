@@ -3,10 +3,6 @@
     font-size: 68%;
   }
 
-  .nav-container,
-  .footer-container {
-    max-width: 140rem;
-  }
 
   .contact__title,
   .cta h2 {
@@ -15,10 +11,6 @@
 }
 
 @media (min-width: 102.5rem) and (max-width: 144rem) {
-  .nav-container {
-    max-width: 120rem;
-  }
-
   .contact__cards {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -29,10 +21,6 @@
 }
 
 @media (min-width: 76.9rem) and (max-width: 102.4rem) {
-  .nav-links {
-    gap: 1.6rem;
-  }
-
   .contact__cards {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -42,19 +30,11 @@
   }
 
   .footer-top {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
   }
 }
 
 @media (min-width: 64.1rem) and (max-width: 76.8rem) {
-  .nav-links {
-    display: none;
-  }
-
-  .navMenuOpen {
-    display: block;
-  }
-
   .contact__cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -64,16 +44,20 @@
   }
 
   .footer-top {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (min-width: 48.1rem) and (max-width: 64rem) {
+/* -------------------------------
+   TABLETS (≤ 1024px / 64rem)
+-------------------------------- */
+@media (max-width: 64rem) {
+
   .nav-links {
     display: none;
   }
 
-  .navMenuOpen {
+  .menuClose {
     display: block;
   }
 
@@ -91,12 +75,17 @@
   }
 }
 
+/* -------------------------------
+   SMALL TABLETS / LARGE PHONES
+   (≤ 768px / 48rem)
+-------------------------------- */
 @media (max-width: 48rem) {
+
   .nav-links {
     display: none;
   }
 
-  .navMenuOpen {
+  .menuClose {
     display: block;
   }
 
@@ -139,5 +128,32 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+/* -------------------------------
+   PHONES (≤ 480px / 30rem)
+-------------------------------- */
+@media (max-width: 30rem) {
+
+  .logo span {
+    font-size: 1.8rem;
+  }
+
+  aside {
+    right: 1.2rem;
+    width: calc(100% - 2.4rem);
+  }
+}
+
+/* -------------------------------
+   VERY SMALL PHONES (≤ 360px)
+-------------------------------- */
+@media (max-width: 22.5rem) {
+
+  .logo-icon,
+  .footer-logo-icon {
+    width: 3rem;
+    height: 3rem;
   }
 }
