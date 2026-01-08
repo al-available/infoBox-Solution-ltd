@@ -261,9 +261,7 @@ aside > a{
   border-radius: 1.4rem;
 
   /* glass look */
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+
   border: 1px solid rgba(255, 255, 255, 0.12);
 
   display: flex;
@@ -277,13 +275,7 @@ aside > a{
     box-shadow 0.3s ease;
 }
 
-/* hover */
-aside > a:hover{
-  color: #00f6ff;
-  background: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 2rem rgba(0, 246, 255, 0.35);
-  transform: translateX(0.4rem);
-}
+
 
 /* active / current link */
 aside > a.active{
