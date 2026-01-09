@@ -313,10 +313,16 @@ aside > a:not(:last-child)::after{
   background-size: 4rem 4rem;
 }
 
+/* =========================
+   HEADER – SLIDE DOWN
+========================= */
 .contact__header {
   max-width: 80rem;
   margin: 13rem auto 6rem;
   text-align: center;
+
+  opacity: 0;
+  animation: contactSlideDown 0.9s ease-out forwards;
 }
 
 .contact__badge {
@@ -327,6 +333,10 @@ aside > a:not(:last-child)::after{
   color: #00e5ff;
   border: 0.1rem solid rgba(0, 229, 255, 0.4);
   margin-bottom: 2rem;
+
+  opacity: 0;
+  animation: contactSlideDown 0.9s ease-out forwards;
+  animation-delay: 0.05s;
 }
 
 .contact__title {
@@ -334,6 +344,10 @@ aside > a:not(:last-child)::after{
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 1.6rem;
+
+  opacity: 0;
+  animation: contactSlideDown 0.9s ease-out forwards;
+  animation-delay: 0.12s;
 }
 
 .contact__title span {
@@ -347,8 +361,15 @@ aside > a:not(:last-child)::after{
   font-size: 1.6rem;
   color: #b5c0d0;
   line-height: 1.6;
+
+  opacity: 0;
+  animation: contactSlideDown 0.9s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
+/* =========================
+   CARDS – SLIDE UP
+========================= */
 .contact__cards {
   max-width: 110rem;
   margin: 0 auto;
@@ -364,6 +385,11 @@ aside > a:not(:last-child)::after{
   text-align: center;
   border: 0.1rem solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(1.2rem);
+
+  opacity: 0;
+  animation: contactSlideUp 0.9s ease-out forwards;
+  animation-delay: 0.3s;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -372,6 +398,7 @@ aside > a:not(:last-child)::after{
   box-shadow: 0 0 4rem rgba(0, 229, 255, 0.25);
 }
 
+/* ICON */
 .contact__icon {
   width: 6rem;
   height: 6rem;
@@ -387,7 +414,7 @@ aside > a:not(:last-child)::after{
 .contact__icon img {
   width: 2.8rem;
   height: 2.8rem;
-    filter:
+  filter:
     brightness(0)
     invert(1)
     drop-shadow(0 0 0.6rem rgba(0,229,255,0.8));
@@ -409,6 +436,47 @@ aside > a:not(:last-child)::after{
   font-size: 1.3rem;
   color: #a9b4c6;
 }
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes contactSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  .contact__header,
+  .contact__badge,
+  .contact__title,
+  .contact__text,
+  .contact__card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* contact ends here */
 
 /* social start here */

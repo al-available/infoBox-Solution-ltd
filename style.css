@@ -301,7 +301,8 @@ aside > a:not(:last-child)::after{
 }
 /* navegation ends here */
 
-/* HERO SECTION */
+
+/* ================= HERO SECTION ================= */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -331,13 +332,27 @@ aside > a:not(:last-child)::after{
     );
 }
 
-/* CONTENT */
+/* ================= SLIDE-UP ANIMATION ================= */
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= CONTENT ================= */
 .hero-content {
   max-width: 80rem;
   text-align: center;
+
+  animation: heroSlideUp 0.9s cubic-bezier(.22,.61,.36,1) both;
 }
 
-/* BADGE */
+/* ================= BADGE ================= */
 .badge {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -347,13 +362,19 @@ aside > a:not(:last-child)::after{
   background-color: rgba(0, 255, 255, 0.15);
   color: #00f6ff;
   border: 0.1rem solid rgba(0, 255, 255, 0.4);
+
+  animation: heroSlideUp 0.8s cubic-bezier(.22,.61,.36,1) both;
+  animation-delay: 0.1s;
 }
 
-/* HEADLINE */
+/* ================= HEADLINE ================= */
 .hero h1 {
   font-size: 5.2rem;
   line-height: 1.15;
   margin-bottom: 2.4rem;
+
+  animation: heroSlideUp 0.9s cubic-bezier(.22,.61,.36,1) both;
+  animation-delay: 0.2s;
 }
 
 .hero h1 span {
@@ -367,45 +388,41 @@ aside > a:not(:last-child)::after{
   background-size: 300% 100%;
 
   -webkit-background-clip: text;
-    background-clip: text;
+  background-clip: text;
   color: transparent;
 
-  animation: heroGradientMove 7s linear infinite;
+  animation:
+    heroGradientMove 7s linear infinite;
 
-  /* subtle glow (cheap & safe) */
   text-shadow: 0 0 2.4rem rgba(56, 189, 248, 0.45);
 }
+
 @keyframes heroGradientMove {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 300% 50%;
-  }
+  from { background-position: 0% 50%; }
+  to   { background-position: 300% 50%; }
 }
 
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .hero h1 span {
-    animation: none;
-  }
-}
-
-/* PARAGRAPH */
+/* ================= PARAGRAPH ================= */
 .hero p {
   font-size: 1.8rem;
   max-width: 68rem;
   margin: 0 auto 4.5rem;
   line-height: 1.6;
   color: #cdd6e0;
+
+  animation: heroSlideUp 0.9s cubic-bezier(.22,.61,.36,1) both;
+  animation-delay: 0.35s;
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+
+  animation: heroSlideUp 0.9s cubic-bezier(.22,.61,.36,1) both;
+  animation-delay: 0.5s;
 }
 
 .btn {
@@ -419,7 +436,7 @@ aside > a:not(:last-child)::after{
   font-weight: 600;
 }
 
-/* PRIMARY BUTTON */
+/* ================= PRIMARY BUTTON ================= */
 .btn.primary {
   background-color: #0de8f0;
   color: #001116;
@@ -438,6 +455,7 @@ aside > a:not(:last-child)::after{
     box-shadow 0.25s ease,
     filter 0.25s ease;
 }
+
 .btn.primary:hover,
 .btn.primary:focus-visible {
   transform: translateY(-2px);
@@ -448,9 +466,7 @@ aside > a:not(:last-child)::after{
     0 0 0 1px rgba(255, 255, 255, 0.25) inset;
 }
 
-
-
-/* SECONDARY BUTTON */
+/* ================= SECONDARY BUTTON ================= */
 .btn.secondary {
   background-color: rgba(255, 255, 255, 0.06);
   color: #ffffff;
@@ -476,6 +492,7 @@ aside > a:not(:last-child)::after{
     background-color 0.18s ease,
     border-color 0.18s ease;
 }
+
 .btn.secondary:hover {
   transform: translateY(-1px);
   background-color: rgba(255, 255, 255, 0.09);
@@ -494,15 +511,22 @@ aside > a:not(:last-child)::after{
     0 1px 0 rgba(255, 255, 255, 0.14) inset,
     0 6px 14px rgba(0, 0, 0, 0.28);
 }
+
 .btn.secondary:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.35);
-  outline-offset: 3px;
+  outline: 0.2rem solid rgba(255, 255, 255, 0.35);
+  outline-offset: 0.3rem;
 }
 
-
-/* BUTTON ARROW */
-.btn span {
-  font-size: 1.8rem;
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .badge,
+  .hero h1,
+  .hero p,
+  .hero-buttons,
+  .hero h1 span {
+    animation: none;
+  }
 }
 
 /* ========== STATS SECTION ========== */

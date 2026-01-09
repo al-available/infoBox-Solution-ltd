@@ -313,14 +313,17 @@ aside > a:not(:last-child)::after{
     linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.04) 96%),
     #35086b;
   background-size: 4rem 4rem;
-
 }
 
 /* CONTAINER */
 .team-container {
   max-width: 110rem;
-  margin:19rem auto;
+  margin: 19rem auto;
   text-align: center;
+
+  /* slide-up */
+  opacity: 0;
+  animation: teamSlideUp 0.9s ease-out forwards;
 }
 
 /* BADGE */
@@ -330,7 +333,7 @@ aside > a:not(:last-child)::after{
   padding: 0.6rem 1.8rem;
 
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.03em;
 
   color: #00f6ff;
@@ -340,18 +343,30 @@ aside > a:not(:last-child)::after{
   border: 0.1rem solid rgba(0, 246, 255, 0.45);
 
   box-shadow: 0 0 2.4rem rgba(0, 246, 255, 0.35);
+
+  /* slide-up */
+  opacity: 0;
+  animation: teamSlideUp 0.9s ease-out forwards;
+  animation-delay: 0.05s;
 }
 
 /* TITLE */
 .team-title {
   font-size: 4.6rem;
   line-height: 1.15;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin-bottom: 2.4rem;
+
+  /* slide-up */
+  opacity: 0;
+  animation: teamSlideUp 0.9s ease-out forwards;
+  animation-delay: 0.12s;
 }
 
 /* Gradient word */
 .team-gradient {
+  font-weight: 800;
   background: linear-gradient(
     90deg,
     #00e5ff,
@@ -359,7 +374,7 @@ aside > a:not(:last-child)::after{
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
-    background-clip: text;
+  background-clip: text;
   color: transparent;
 
   animation: teamGradientMove 6s linear infinite;
@@ -376,10 +391,28 @@ aside > a:not(:last-child)::after{
 
   font-size: 1.6rem;
   line-height: 1.7;
+  font-weight: 500;
   color: #cbd5f5;
+
+  /* slide-up */
+  opacity: 0;
+  animation: teamSlideUp 0.9s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
-/* ANIMATION */
+/* SLIDE-UP KEYFRAMES */
+@keyframes teamSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GRADIENT ANIMATION */
 @keyframes teamGradientMove {
   from { background-position: 0% 50%; }
   to   { background-position: 200% 50%; }
@@ -387,10 +420,21 @@ aside > a:not(:last-child)::after{
 
 /* ACCESSIBILITY */
 @media (prefers-reduced-motion: reduce) {
+  .team-container,
+  .team-badge,
+  .team-title,
+  .team-description {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
   .team-gradient {
     animation: none;
   }
 }
+
+
 /* team hero section ends here */
 
 /* principles section starts */
