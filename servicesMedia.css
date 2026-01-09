@@ -1,0 +1,166 @@
+@media (min-width: 144.1rem) {
+  html { font-size: 68%; }
+
+  .stats__grid,
+  .footer-container {
+    max-width: 140rem;
+  }
+
+  .hero__title { font-size: 6rem; }
+  .cta__content h2 { font-size: 4.4rem; }
+}
+
+@media (min-width: 102.5rem) and (max-width: 144rem) {
+  html { font-size: 62.5%; }
+
+  .stats__grid,
+  .footer-container {
+    max-width: 120rem;
+  }
+}
+
+@media (min-width: 76.9rem) and (max-width: 102.4rem) {
+  html { font-size: 62%; }
+
+  .services__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta__card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 64.1rem) and (max-width: 76.8rem) {
+  html { font-size: 61%; }
+
+  .services__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta__card {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* -------------------------------
+   TABLETS (≤ 1024px / 64rem)
+-------------------------------- */
+@media (max-width: 64rem) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menuClose {
+    display: block;
+  }
+
+  html { font-size: 60%; }
+
+  .services__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* -------------------------------
+   SMALL TABLETS / LARGE PHONES
+   (≤ 768px / 48rem)
+-------------------------------- */
+@media (max-width: 48rem) {
+
+  .navbar {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-container {
+    width: 100%;
+    padding: 1rem 1.6rem;
+  }
+
+  .logo span {
+    font-size: 2rem;
+  }
+
+  html { font-size: 58%; }
+
+  .hero__title { font-size: 4rem; }
+
+  .services__cards,
+  .cta__card {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* -------------------------------
+   PHONES (≤ 480px / 30rem)
+-------------------------------- */
+@media (max-width: 30rem) {
+
+  .logo span {
+    font-size: 1.8rem;
+  }
+
+  aside {
+    right: 1.2rem;
+    width: calc(100% - 2.4rem);
+  }
+
+  html { font-size: 56%; }
+
+  .hero__title { font-size: 3.6rem; }
+  .hero__text { font-size: 1.5rem; }
+
+  .services__cards,
+  .footer-top,
+  .cta__card {
+    grid-template-columns: 1fr;
+  }
+
+  .stats__grid {
+    gap: 2.4rem;
+  }
+
+  .process__timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .step__line {
+    display: none;
+  }
+}
+
+/* -------------------------------
+   VERY SMALL PHONES (≤ 360px)
+-------------------------------- */
+@media (max-width: 22.5rem) {
+
+  .logo-icon,
+  .footer-logo-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
